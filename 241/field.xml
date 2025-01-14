@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catch2TestRun name="bench_field" rng-seed="3949717785" xml-format-version="3" catch2-version="3.4.0">
+  <TestCase name="[bench] fields" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="40">
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.04562e+07">
+        <!-- All values in nano seconds -->
+        <mean value="103919" lowerBound="99754.2" upperBound="117460" ci="0.95"/>
+        <standardDeviation value="34194.5" lowerBound="9501.49" upperBound="75763.9" ci="0.95"/>
+        <outliers variance="0.978614" lowMild="9" lowSevere="0" highMild="3" highSevere="10"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.01913e+07">
+        <!-- All values in nano seconds -->
+        <mean value="103618" lowerBound="101987" upperBound="109088" ci="0.95"/>
+        <standardDeviation value="13397.5" lowerBound="3474.27" upperBound="29517.3" ci="0.95"/>
+        <outliers variance="0.862926" lowMild="0" lowSevere="0" highMild="0" highSevere="8"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.053e+07">
+        <!-- All values in nano seconds -->
+        <mean value="107818" lowerBound="106072" upperBound="113255" ci="0.95"/>
+        <standardDeviation value="14222.6" lowerBound="4793.38" upperBound="31420" ci="0.95"/>
+        <outliers variance="0.873046" lowMild="0" lowSevere="0" highMild="0" highSevere="9"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.04839e+07">
+        <!-- All values in nano seconds -->
+        <mean value="106971" lowerBound="104977" upperBound="112790" ci="0.95"/>
+        <standardDeviation value="15362.3" lowerBound="3099.42" upperBound="32490" ci="0.95"/>
+        <outliers variance="0.893863" lowMild="0" lowSevere="0" highMild="1" highSevere="7"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.2632e+06">
+        <!-- All values in nano seconds -->
+        <mean value="33715.1" lowerBound="32768.8" upperBound="37201" ci="0.95"/>
+        <standardDeviation value="8089.93" lowerBound="2325.82" upperBound="18319.5" ci="0.95"/>
+        <outliers variance="0.957499" lowMild="0" lowSevere="0" highMild="1" highSevere="7"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.2427e+06">
+        <!-- All values in nano seconds -->
+        <mean value="33565" lowerBound="32716.8" upperBound="36751" ci="0.95"/>
+        <standardDeviation value="7296.36" lowerBound="1539.42" upperBound="16764.9" ci="0.95"/>
+        <outliers variance="0.947016" lowMild="0" lowSevere="0" highMild="1" highSevere="6"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="2.57643e+07">
+        <!-- All values in nano seconds -->
+        <mean value="262077" lowerBound="259139" upperBound="272248" ci="0.95"/>
+        <standardDeviation value="24641.2" lowerBound="7000.01" upperBound="55254.4" ci="0.95"/>
+        <outliers variance="0.769247" lowMild="0" lowSevere="0" highMild="0" highSevere="5"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="2.59762e+07">
+        <!-- All values in nano seconds -->
+        <mean value="262817" lowerBound="259878" upperBound="272416" ci="0.95"/>
+        <standardDeviation value="24284.1" lowerBound="6592.01" upperBound="53808.4" ci="0.95"/>
+        <outliers variance="0.768865" lowMild="3" lowSevere="0" highMild="0" highSevere="20"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="2.594e+07">
+        <!-- All values in nano seconds -->
+        <mean value="262863" lowerBound="259780" upperBound="273324" ci="0.95"/>
+        <standardDeviation value="25625.4" lowerBound="5950.12" upperBound="57621.1" ci="0.95"/>
+        <outliers variance="0.779739" lowMild="0" lowSevere="0" highMild="0" highSevere="17"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="2.60142e+07">
+        <!-- All values in nano seconds -->
+        <mean value="264031" lowerBound="260893" upperBound="274989" ci="0.95"/>
+        <standardDeviation value="26507.6" lowerBound="6321.92" upperBound="60124.1" ci="0.95"/>
+        <outliers variance="0.790079" lowMild="5" lowSevere="0" highMild="0" highSevere="17"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="4.1197e+06">
+        <!-- All values in nano seconds -->
+        <mean value="41913.1" lowerBound="41256.4" upperBound="44147.7" ci="0.95"/>
+        <standardDeviation value="5525.76" lowerBound="1704.42" upperBound="12404.6" ci="0.95"/>
+        <outliers variance="0.873039" lowMild="0" lowSevere="0" highMild="1" highSevere="4"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="4.0988e+06">
+        <!-- All values in nano seconds -->
+        <mean value="41906.1" lowerBound="41471.5" upperBound="43271.9" ci="0.95"/>
+        <standardDeviation value="3514.98" lowerBound="1188.31" upperBound="7652.23" ci="0.95"/>
+        <outliers variance="0.727838" lowMild="13" lowSevere="0" highMild="9" highSevere="5"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="5.01149e+07">
+        <!-- All values in nano seconds -->
+        <mean value="509312" lowerBound="503001" upperBound="528748" ci="0.95"/>
+        <standardDeviation value="49821.9" lowerBound="8960.8" upperBound="107612" ci="0.95"/>
+        <outliers variance="0.78955" lowMild="0" lowSevere="0" highMild="5" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="5.17506e+07">
+        <!-- All values in nano seconds -->
+        <mean value="526327" lowerBound="519879" upperBound="545498" ci="0.95"/>
+        <standardDeviation value="51234.7" lowerBound="13171.9" upperBound="110049" ci="0.95"/>
+        <outliers variance="0.779709" lowMild="0" lowSevere="0" highMild="4" highSevere="5"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="5.09387e+07">
+        <!-- All values in nano seconds -->
+        <mean value="514814" lowerBound="508350" upperBound="534896" ci="0.95"/>
+        <standardDeviation value="51796.6" lowerBound="10284.8" upperBound="112560" ci="0.95"/>
+        <outliers variance="0.790121" lowMild="0" lowSevere="0" highMild="3" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="5.08118e+07">
+        <!-- All values in nano seconds -->
+        <mean value="521089" lowerBound="514086" upperBound="541738" ci="0.95"/>
+        <standardDeviation value="55391.8" lowerBound="20845.2" upperBound="118915" ci="0.95"/>
+        <outliers variance="0.810702" lowMild="0" lowSevere="0" highMild="1" highSevere="3"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="6.7671e+06">
+        <!-- All values in nano seconds -->
+        <mean value="68502.3" lowerBound="67782.1" upperBound="70518" ci="0.95"/>
+        <standardDeviation value="5685.29" lowerBound="2351.64" upperBound="12129.3" ci="0.95"/>
+        <outliers variance="0.727578" lowMild="0" lowSevere="8" highMild="2" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="6.7751e+06">
+        <!-- All values in nano seconds -->
+        <mean value="68821.5" lowerBound="68270.1" upperBound="70611.6" ci="0.95"/>
+        <standardDeviation value="4577.49" lowerBound="1543.82" upperBound="10218.6" ci="0.95"/>
+        <outliers variance="0.625533" lowMild="0" lowSevere="4" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.15495e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.08604e+06" lowerBound="1.07176e+06" upperBound="1.12062e+06" ci="0.95"/>
+        <standardDeviation value="106361" lowerBound="50430.6" upperBound="212773" ci="0.95"/>
+        <outliers variance="0.789574" lowMild="0" lowSevere="0" highMild="10" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.21874e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.21204e+06" lowerBound="1.19786e+06" upperBound="1.24079e+06" ci="0.95"/>
+        <standardDeviation value="99290.2" lowerBound="59062.5" upperBound="189797" ci="0.95"/>
+        <outliers variance="0.717593" lowMild="0" lowSevere="0" highMild="1" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.18441e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.18321e+06" lowerBound="1.16724e+06" upperBound="1.21408e+06" ci="0.95"/>
+        <standardDeviation value="109471" lowerBound="67631.6" upperBound="205411" ci="0.95"/>
+        <outliers variance="0.768895" lowMild="0" lowSevere="0" highMild="5" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.08688e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.1871e+06" lowerBound="1.17114e+06" upperBound="1.21902e+06" ci="0.95"/>
+        <standardDeviation value="110878" lowerBound="66965.3" upperBound="206774" ci="0.95"/>
+        <outliers variance="0.769103" lowMild="0" lowSevere="0" highMild="2" highSevere="4"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.51029e+07">
+        <!-- All values in nano seconds -->
+        <mean value="151303" lowerBound="150777" upperBound="152988" ci="0.95"/>
+        <standardDeviation value="4358.97" lowerBound="1612.22" upperBound="9714.51" ci="0.95"/>
+        <outliers variance="0.238234" lowMild="4" lowSevere="0" highMild="3" highSevere="2"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="1.50857e+07">
+        <!-- All values in nano seconds -->
+        <mean value="151114" lowerBound="150459" upperBound="153414" ci="0.95"/>
+        <standardDeviation value="5688.67" lowerBound="1533.48" upperBound="13098.4" ci="0.95"/>
+        <outliers variance="0.345711" lowMild="8" lowSevere="0" highMild="0" highSevere="1"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.19351e+08">
+        <!-- All values in nano seconds -->
+        <mean value="3.27316e+06" lowerBound="3.22776e+06" upperBound="3.33278e+06" ci="0.95"/>
+        <standardDeviation value="263392" lowerBound="211947" upperBound="335858" ci="0.95"/>
+        <outliers variance="0.707491" lowMild="0" lowSevere="0" highMild="8" highSevere="3"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.18595e+08">
+        <!-- All values in nano seconds -->
+        <mean value="3.02425e+06" lowerBound="2.98042e+06" upperBound="3.08823e+06" ci="0.95"/>
+        <standardDeviation value="268058" lowerBound="195740" upperBound="369030" ci="0.95"/>
+        <outliers variance="0.748513" lowMild="0" lowSevere="0" highMild="3" highSevere="4"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.06456e+08">
+        <!-- All values in nano seconds -->
+        <mean value="3.17001e+06" lowerBound="3.14755e+06" upperBound="3.20868e+06" ci="0.95"/>
+        <standardDeviation value="146805" lowerBound="98962.5" upperBound="269133" ci="0.95"/>
+        <outliers variance="0.444584" lowMild="0" lowSevere="0" highMild="1" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="3.13486e+08">
+        <!-- All values in nano seconds -->
+        <mean value="3.10667e+06" lowerBound="3.08657e+06" upperBound="3.1468e+06" ci="0.95"/>
+        <standardDeviation value="139705" lowerBound="84672" upperBound="264716" ci="0.95"/>
+        <outliers variance="0.425041" lowMild="0" lowSevere="0" highMild="5" highSevere="3"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/fields/field.cpp" line="56">
+      <BenchmarkResults name="Field&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="8.42123e+07">
+        <!-- All values in nano seconds -->
+        <mean value="840114" lowerBound="829446" upperBound="842913" ci="0.95"/>
+        <standardDeviation value="25359.7" lowerBound="4159.91" upperBound="59712.1" ci="0.95"/>
+        <outliers variance="0.248408" lowMild="0" lowSevere="1" highMild="6" highSevere="1"/>
+      </BenchmarkResults>
+      <BenchmarkResults name="Field&lt;scalar>::multiplication on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="28.9608" estimatedDuration="8.43275e+07">
+        <!-- All values in nano seconds -->
+        <mean value="840533" lowerBound="831625" upperBound="842865" ci="0.95"/>
+        <standardDeviation value="21093" lowerBound="3529.87" upperBound="49671.6" ci="0.95"/>
+        <outliers variance="0.190075" lowMild="0" lowSevere="1" highMild="2" highSevere="1"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <OverallResult success="true" skips="0"/>
+  </TestCase>
+  <OverallResults successes="0" failures="0" expectedFailures="0" skips="0"/>
+  <OverallResultsCases successes="1" failures="0" expectedFailures="0" skips="0"/>
+</Catch2TestRun>

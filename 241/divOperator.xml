@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Catch2TestRun name="bench_divOperator" rng-seed="1441904060" xml-format-version="3" catch2-version="3.4.0">
+  <TestCase name="divOperator" tags="[bench]" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="40">
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="4.16741e+07">
+        <!-- All values in nano seconds -->
+        <mean value="416896" lowerBound="413693" upperBound="425375" ci="0.95"/>
+        <standardDeviation value="24444.3" lowerBound="9018.95" upperBound="50216.8" ci="0.95"/>
+        <outliers variance="0.564711" lowMild="0" lowSevere="0" highMild="3" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="1.46861e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.48071e+06" lowerBound="1.47679e+06" upperBound="1.48904e+06" ci="0.95"/>
+        <standardDeviation value="27866" lowerBound="16298.5" upperBound="54255.6" ci="0.95"/>
+        <outliers variance="0.113647" lowMild="0" lowSevere="0" highMild="2" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="65536" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="3.27621e+07">
+        <!-- All values in nano seconds -->
+        <mean value="327959" lowerBound="326165" upperBound="331669" ci="0.95"/>
+        <standardDeviation value="12604.7" lowerBound="7272.09" upperBound="23222.1" ci="0.95"/>
+        <outliers variance="0.355519" lowMild="0" lowSevere="0" highMild="4" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="8.18573e+07">
+        <!-- All values in nano seconds -->
+        <mean value="824142" lowerBound="819002" upperBound="841607" ci="0.95"/>
+        <standardDeviation value="42777" lowerBound="12324.5" upperBound="95620" ci="0.95"/>
+        <outliers variance="0.504318" lowMild="0" lowSevere="0" highMild="2" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="2.91711e+08">
+        <!-- All values in nano seconds -->
+        <mean value="2.92219e+06" lowerBound="2.91698e+06" upperBound="2.93732e+06" ci="0.95"/>
+        <standardDeviation value="41598" lowerBound="16830.8" upperBound="89714.7" ci="0.95"/>
+        <outliers variance="0.0750652" lowMild="0" lowSevere="0" highMild="5" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="131072" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="3.59266e+07">
+        <!-- All values in nano seconds -->
+        <mean value="359819" lowerBound="357487" upperBound="366568" ci="0.95"/>
+        <standardDeviation value="18574.1" lowerBound="8172.67" upperBound="40056.8" ci="0.95"/>
+        <outliers variance="0.494749" lowMild="0" lowSevere="0" highMild="10" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="1.64235e+08">
+        <!-- All values in nano seconds -->
+        <mean value="1.65739e+06" lowerBound="1.64704e+06" upperBound="1.68993e+06" ci="0.95"/>
+        <standardDeviation value="84459.5" lowerBound="25626.1" upperBound="186232" ci="0.95"/>
+        <outliers variance="0.49435" lowMild="0" lowSevere="0" highMild="5" highSevere="5"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="5.81995e+08">
+        <!-- All values in nano seconds -->
+        <mean value="5.80268e+06" lowerBound="5.79512e+06" upperBound="5.82276e+06" ci="0.95"/>
+        <standardDeviation value="57983.4" lowerBound="22854.5" upperBound="118738" ci="0.95"/>
+        <outliers variance="0.0099" lowMild="0" lowSevere="0" highMild="3" highSevere="5"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="262144" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="4.23244e+07">
+        <!-- All values in nano seconds -->
+        <mean value="423925" lowerBound="422523" upperBound="427322" ci="0.95"/>
+        <standardDeviation value="10481.7" lowerBound="5406.05" upperBound="21662.3" ci="0.95"/>
+        <outliers variance="0.180773" lowMild="0" lowSevere="0" highMild="4" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="3.4891e+08">
+        <!-- All values in nano seconds -->
+        <mean value="3.43795e+06" lowerBound="3.41973e+06" upperBound="3.48998e+06" ci="0.95"/>
+        <standardDeviation value="143163" lowerBound="60945.7" upperBound="303599" ci="0.95"/>
+        <outliers variance="0.394853" lowMild="0" lowSevere="0" highMild="4" highSevere="4"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="1.17958e+09">
+        <!-- All values in nano seconds -->
+        <mean value="1.18997e+07" lowerBound="1.18744e+07" upperBound="1.19399e+07" ci="0.95"/>
+        <standardDeviation value="159833" lowerBound="114770" upperBound="254702" ci="0.95"/>
+        <outliers variance="0.0657562" lowMild="0" lowSevere="0" highMild="3" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="524288" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="5.66604e+07">
+        <!-- All values in nano seconds -->
+        <mean value="566075" lowerBound="564355" upperBound="568898" ci="0.95"/>
+        <standardDeviation value="11007.5" lowerBound="7668.61" upperBound="17967.6" ci="0.95"/>
+        <outliers variance="0.123016" lowMild="0" lowSevere="0" highMild="3" highSevere="2"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on SerialExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="9.03965e+08">
+        <!-- All values in nano seconds -->
+        <mean value="9.0901e+06" lowerBound="9.03431e+06" upperBound="9.14894e+06" ci="0.95"/>
+        <standardDeviation value="292425" lowerBound="260733" upperBound="333103" ci="0.95"/>
+        <outliers variance="0.277302" lowMild="0" lowSevere="0" highMild="0" highSevere="0"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on CPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="2.56131e+09">
+        <!-- All values in nano seconds -->
+        <mean value="2.58645e+07" lowerBound="2.5821e+07" upperBound="2.59066e+07" ci="0.95"/>
+        <standardDeviation value="217268" lowerBound="193835" upperBound="261098" ci="0.95"/>
+        <outliers variance="0.0099" lowMild="1" lowSevere="0" highMild="0" highSevere="0"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <Section name="1048576" filename="/share/software/actions-runner/_work/NeoFOAM/NeoFOAM/benchmarks/finiteVolume/cellCentred/operator/divOperator.cpp" line="64">
+      <BenchmarkResults name="DivOperator&lt;scalar>::addition on GPUExecutor" samples="100" resamples="100000" iterations="1" clockResolution="29.0643" estimatedDuration="8.15046e+07">
+        <!-- All values in nano seconds -->
+        <mean value="817106" lowerBound="815188" upperBound="822665" ci="0.95"/>
+        <standardDeviation value="15176.6" lowerBound="6862.22" upperBound="32637.3" ci="0.95"/>
+        <outliers variance="0.113478" lowMild="0" lowSevere="0" highMild="8" highSevere="1"/>
+      </BenchmarkResults>
+      <OverallResults successes="0" failures="0" expectedFailures="0" skipped="false"/>
+    </Section>
+    <OverallResult success="true" skips="0"/>
+  </TestCase>
+  <OverallResults successes="0" failures="0" expectedFailures="0" skips="0"/>
+  <OverallResultsCases successes="1" failures="0" expectedFailures="0" skips="0"/>
+</Catch2TestRun>
