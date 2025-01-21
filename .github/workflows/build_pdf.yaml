@@ -1,0 +1,30 @@
+name: Build PDF
+run-name: Build PDF
+
+on:
+  push
+permissions:
+  contents: write
+
+jobs:
+  build-pdf:
+    name: Build PDF
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: pip install pandas seaborn
+
+
+    - name: Run pandoc
+      run: |
+         python scripts/plot.py
+
+    - name: Add to PDF to repo
+      run: |
+         git config user.name github-actions
+         git config user.email github-actions@github.com
+         git add */*.png
+         git commit -m 'generate pdfs'
+         git push origin ${{ github.ref }}
