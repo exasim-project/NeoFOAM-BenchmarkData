@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   build-pdf:
-    name: Build PDF
+    name: Build PNGs
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -26,5 +26,5 @@ jobs:
          git config user.name github-actions
          git config user.email github-actions@github.com
          git add */*.png
-         git commit -m 'generate pdfs'
+         git commit -m 'generate pngs'
          git push origin ${{ github.ref }}
