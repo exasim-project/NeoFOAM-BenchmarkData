@@ -1,6 +1,8 @@
 import pandas as pd
 import seaborn as sb
 import os
+import matplotlib.pyplot as plt
+
 from pathlib import Path
 
 
@@ -13,24 +15,30 @@ def is_number(f):
 
 
 def plot_file(pr_file, main_file):
+    """ time is in e-09"""
 
     pr = pd.read_json(pr_file)
     main = pd.read_json(main_file)
 
     pr = pr.astype({"size":"float","mean":"float"})
     main = main.astype({"size":"float","mean":"float"})
+    pr["time [ns]"] = pr["mean"]
 
-    plot = sb.catplot(kind="bar", data=pr, x="size", y="mean", hue="executor", col="test_case")
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="time [ns]", hue="executor", col="test_case")
+    #plt.grid()
     plot.savefig(str(pr_file).replace(".json", "_time.png"))
 
-    pr["mean_rel"] = pr["mean"]/main["mean"]
-    pr["mean_rel"] = pr["mean"] - 1.
+    pr["rel. diff. [%]"] = pr["mean"]/main["mean"] * 100
+    pr["rel. diff. [%]"] = pr["rel. diff. [%]"] - 100.
 
-    plot = sb.catplot(kind="bar", data=pr, x="size", y="mean_rel", hue="executor", col="test_case")
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="rel. diff. [%]", hue="executor", col="test_case")
+    #plt.grid()
     plot.savefig(str(pr_file).replace(".json", "_relative.png"))
 
-    pr["fvops"] = pr["size"]/pr["mean"]
+    pr["fvops"] = pr["size"]/pr["mean"] * 10e9
+
     plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor", col="test_case")
+    #plt.grid()
     plot.savefig(str(pr_file).replace(".json", "_fvops.png"))
 
 def plot_fold(root, pr_number):
