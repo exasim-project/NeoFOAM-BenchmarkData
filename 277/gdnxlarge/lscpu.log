@@ -12,8 +12,8 @@ CPU family:          6
 Model:               85
 Model name:          Intel(R) Xeon(R) Platinum 8259CL CPU @ 2.50GHz
 Stepping:            7
-CPU MHz:             3083.299
-BogoMIPS:            4999.98
+CPU MHz:             3110.627
+BogoMIPS:            4999.99
 Hypervisor vendor:   KVM
 Virtualization type: full
 L1d cache:           32K
