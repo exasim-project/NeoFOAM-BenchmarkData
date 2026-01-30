@@ -57,7 +57,11 @@ def plot_fold(root, pr_number):
 
 
 def main():
-    root, folds, _  = next(os.walk("."))
+    root, folds, _  = next(os.walk("NeoN"))
+    for fold in folds:
+        if is_number(fold):
+            plot_fold(Path(root), Path(fold))
+    root, folds, _  = next(os.walk("NeoFOAM"))
     for fold in folds:
         if is_number(fold):
             plot_fold(Path(root), Path(fold))
