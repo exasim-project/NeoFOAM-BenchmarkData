@@ -46,6 +46,11 @@ def plot_file_neofoam(pr_file):
 
     pr = pd.read_csv(pr_file)
 
+    pr['benchmark_name'] = pr['benchmark_name'].apply(lambda x: x.replace("Executor",""))
+    pr['section1'] = pr['section1'].apply(lambda x: x.replace("OpenFOAM",""))
+    pr['section2'] = pr['section2'].apply(lambda x: x.replace("OF_",""))
+    pr['section1'] = pr['section1'].apply(lambda x: x.replace("NeoN",""))
+    pr['section2'] = pr['section2'].apply(lambda x: x.replace("NeoN","NN_"))
     pr['Resolution'] = pr['Resolution'].apply(lambda x: int(x[1:]))
     pr["Cells"] = 0
     pr.loc[pr["MeshType"] == '2DSquare', 'Cells'] = pr['Resolution']**2
@@ -68,9 +73,16 @@ def plot_file_neofoam(pr_file):
     #plt.grid()
     pr["fvops"] = pr["size"]/pr["mean"] * 10e9
 
-    plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor", col="test_case")
+    pr["executor_sec2"] = pr["benchmark_name"] + pr["section2"] 
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor_sec2", col="test_case")
     #plt.grid()
+    plot.set(yscale="log")
     plot.savefig(str(pr_file).replace(".csv", "_fvops.png"))
+
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="Time/Cell", hue="executor_sec2",  col="test_case")
+    plot.set(yscale="log")
+    plot.savefig(str(pr_file).replace(".csv", "_timp_per_cell.png"))
+
 
 def plot_fold(root, pr_number):
     """given a folder this function calls plot_fn for every json"""
