@@ -13,12 +13,11 @@ def is_number(f):
     except:
         return False
 
-
-def plot_file(pr_file, main_file):
+def plot_file_neon(pr_file, main_file):
     """ time is in e-09"""
 
-    pr = pd.read_json(pr_file)
-    main = pd.read_json(main_file)
+    pr = pd.read_csv(pr_file)
+    main = pd.read_csv(pr_file)
 
     pr = pr.astype({"size":"float","mean":"float"})
     main = main.astype({"size":"float","mean":"float"})
@@ -41,6 +40,38 @@ def plot_file(pr_file, main_file):
     #plt.grid()
     plot.savefig(str(pr_file).replace(".json", "_fvops.png"))
 
+
+def plot_file_neofoam(pr_file):
+    """ time is in e-09"""
+
+    pr = pd.read_csv(pr_file)
+
+    pr['Resolution'] = pr['Resolution'].apply(lambda x: int(x[1:]))
+    pr["Cells"] = 0
+    pr.loc[pr["MeshType"] == '2DSquare', 'Cells'] = pr['Resolution']**2
+    pr.loc[pr["MeshType"] == '3DCube', 'Cells'] = pr['Resolution']**3
+    pr["Time/Cell"] = pr["avg_runtime"]/ pr["Cells"]
+    
+    # print(df.pivot(columns=["section1", "MeshType", "benchmark_name"], values="Time/Cell", index=["section2", "Resolution"]))
+
+
+    pr["time [ns]"] = pr["avg_runtime"]
+    pr["size"] = pr["Cells"]
+    pr["mean"] = pr["avg_runtime"]
+    pr["executor"] = pr["benchmark_name"]
+    pr["test_case"] = pr["section1"] + pr["MeshType"]
+
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="time [ns]", hue="executor", col="test_case")
+    #plt.grid()
+    plot.savefig(str(pr_file).replace(".csv", "_time.png"))
+
+    #plt.grid()
+    pr["fvops"] = pr["size"]/pr["mean"] * 10e9
+
+    plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor", col="test_case")
+    #plt.grid()
+    plot.savefig(str(pr_file).replace(".csv", "_fvops.png"))
+
 def plot_fold(root, pr_number):
     """given a folder this function calls plot_fn for every json"""
     _, inst, _ = next(os.walk(root/pr_number))
@@ -48,19 +79,11 @@ def plot_fold(root, pr_number):
         _, _, files = next(os.walk(root/pr_number/i))
         for f in files:
             print(pr_number, i, f)
-            if not f.endswith("json"):
-                continue
-            main_path = root/pr_number/i/"main"/f
-            if not main_path.exists():
-                continue
-            plot_file(root/pr_number/i/f, main_path)
+            if f.endswith("csv"):
+                plot_file_neofoam(root/pr_number/i/f)
 
 
 def main():
-    root, folds, _  = next(os.walk("NeoN"))
-    for fold in folds:
-        if is_number(fold):
-            plot_fold(Path(root), Path(fold))
     root, folds, _  = next(os.walk("NeoFOAM"))
     for fold in folds:
         if is_number(fold):
