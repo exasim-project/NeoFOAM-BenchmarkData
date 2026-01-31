@@ -41,39 +41,38 @@ def plot_file_neon(pr_file, main_file):
     plot.savefig(str(pr_file).replace(".json", "_fvops.png"))
 
 
-def plot_file_neofoam(pr_file):
+def plot_file_neofoam(pr_file, latest):
     """ time is in e-09"""
-
     pr = pd.read_csv(pr_file)
 
-    pr['benchmark_name'] = pr['benchmark_name'].apply(lambda x: x.replace("Executor",""))
-    pr['section1'] = pr['section1'].apply(lambda x: x.replace("OpenFOAM",""))
-    pr['section2'] = pr['section2'].apply(lambda x: x.replace("OF_",""))
-    pr['section1'] = pr['section1'].apply(lambda x: x.replace("NeoN",""))
-    pr['section2'] = pr['section2'].apply(lambda x: x.replace("NeoN","NN_"))
-    pr['Resolution'] = pr['Resolution'].apply(lambda x: int(x[1:]))
-    pr["Cells"] = 0
-    pr.loc[pr["MeshType"] == '2DSquare', 'Cells'] = pr['Resolution']**2
-    pr.loc[pr["MeshType"] == '3DCube', 'Cells'] = pr['Resolution']**3
-    pr["Time/Cell"] = pr["avg_runtime"]/ pr["Cells"]
-    
-    # print(df.pivot(columns=["section1", "MeshType", "benchmark_name"], values="Time/Cell", index=["section2", "Resolution"]))
+    def preprocess(df):
+        df['benchmark_name'] = df['benchmark_name'].apply(lambda x: x.replace("Executor",""))
+        df['section1'] = df['section1'].apply(lambda x: x.replace("OpenFOAM",""))
+        df['section2'] = df['section2'].apply(lambda x: x.replace("OF_",""))
+        df['section1'] = df['section1'].apply(lambda x: x.replace("NeoN",""))
+        df['section2'] = df['section2'].apply(lambda x: x.replace("NeoN","NN_"))
+        df['Resolution'] = df['Resolution'].apply(lambda x: int(x[1:]))
+        df["Cells"] = 0
+        df.loc[df["MeshType"] == '2DSquare', 'Cells'] = df['Resolution']**2
+        df.loc[df["MeshType"] == '3DCube', 'Cells'] = df['Resolution']**3
+        df["Time/Cell"] = df["avg_runtime"]/ df["Cells"]
+        df["time [ns]"] = df["avg_runtime"]
+        df["size"] = df["Cells"]
+        df["mean"] = df["avg_runtime"]
+        df["executor"] = df["benchmark_name"]
+        df["test_case"] = df["section1"] + df["MeshType"]
+        df["fvops"] = df["size"]/df["mean"] * 10e9
+        df["executor_sec2"] =     df["benchmark_name"] +     df["section2"] 
+        return df
 
-
-    pr["time [ns]"] = pr["avg_runtime"]
-    pr["size"] = pr["Cells"]
-    pr["mean"] = pr["avg_runtime"]
-    pr["executor"] = pr["benchmark_name"]
-    pr["test_case"] = pr["section1"] + pr["MeshType"]
+    pr = preprocess(pr)
 
     plot = sb.catplot(kind="bar", data=pr, x="size", y="time [ns]", hue="executor", col="test_case")
     #plt.grid()
     plot.savefig(str(pr_file).replace(".csv", "_time.png"))
 
     #plt.grid()
-    pr["fvops"] = pr["size"]/pr["mean"] * 10e9
 
-    pr["executor_sec2"] = pr["benchmark_name"] + pr["section2"] 
     plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor_sec2", col="test_case")
     #plt.grid()
     plot.set(yscale="log")
@@ -82,6 +81,20 @@ def plot_file_neofoam(pr_file):
     plot = sb.catplot(kind="bar", data=pr, x="size", y="Time/Cell", hue="executor_sec2",  col="test_case")
     plot.set(yscale="log")
     plot.savefig(str(pr_file).replace(".csv", "_timp_per_cell.png"))
+    
+    if not latest.exists(): 
+        return
+    latest = pd.read_csv(latest)
+
+    latest = preprocess(latest)
+
+    latest["fvops"] = latest["fvops"]/pr["fvops"]
+
+    plot = sb.catplot(kind="bar", data=latest, x="size", y="fvops", hue="executor_sec2",  col="test_case")
+    plot.set(yscale="log")
+    plot.savefig(str(pr_file).replace(".csv", "_speedup_fvops.png"))
+
+
 
 
 def plot_fold(root, pr_number):
@@ -92,7 +105,7 @@ def plot_fold(root, pr_number):
         for f in files:
             print(pr_number, i, f)
             if f.endswith("csv"):
-                plot_file_neofoam(root/pr_number/i/f)
+                plot_file_neofoam(root/pr_number/i/f, root/"latest"/i/f)
 
 
 def main():
