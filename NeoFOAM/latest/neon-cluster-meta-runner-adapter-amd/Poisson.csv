@@ -1,0 +1,13 @@
+MeshType,Resolution,level_2,test_case,benchmark_name,avg_runtime,section1,section2,normalized_speedup
+2DSquare,N512,6,Poisson,OpenFOAM,3377410.0,OpenFOAM,Poisson,1.0
+2DSquare,N512,7,Poisson,SerialExecutor,2798760.0,NeoN,Poisson,1.2067522760079463
+2DSquare,N512,8,Poisson,GPUExecutor,1853930.0,NeoN,Poisson,1.821757024267367
+2DSquare,N64,3,Poisson,OpenFOAM,35605.3,OpenFOAM,Poisson,1.0
+2DSquare,N64,4,Poisson,SerialExecutor,53409.7,NeoN,Poisson,0.666644822944147
+2DSquare,N64,5,Poisson,GPUExecutor,1465620.0,NeoN,Poisson,0.024293677760947586
+3DCube,N16,0,Poisson,OpenFOAM,49907.2,OpenFOAM,Poisson,1.0
+3DCube,N16,1,Poisson,SerialExecutor,61456.8,NeoN,Poisson,0.8120696163809374
+3DCube,N16,2,Poisson,GPUExecutor,1509430.0,NeoN,Poisson,0.03306360679196783
+3DCube,N64,9,Poisson,OpenFOAM,4885960.0,OpenFOAM,Poisson,1.0
+3DCube,N64,10,Poisson,SerialExecutor,4063260.0,NeoN,Poisson,1.2024728912252722
+3DCube,N64,11,Poisson,GPUExecutor,1895790.0,NeoN,Poisson,2.5772685793257692

@@ -1,0 +1,37 @@
+MeshType,Resolution,level_2,test_case,benchmark_name,avg_runtime,section1,section2,normalized_speedup
+2DSquare,N512,18,pressureVelocityCoupling,CPU,657295.0,OpenFOAM,Compute rAU,8.291421659985243
+2DSquare,N512,19,pressureVelocityCoupling,CPU,5462910.0,OpenFOAM,Compute HbyA,0.9976203159122153
+2DSquare,N512,20,pressureVelocityCoupling,OpenFOAM,5449910.0,OpenFOAM,constrainHbyA,1.0
+2DSquare,N512,21,pressureVelocityCoupling,SerialExecutor,1115080.0,NeoN,Compute rAU,4.887460989346056
+2DSquare,N512,22,pressureVelocityCoupling,SerialExecutor,14942200.0,NeoN,Compute HbyA,0.3647327702747922
+2DSquare,N512,23,pressureVelocityCoupling,SerialExecutor,61.356,NeoN,constrainHbyA,88824.40185148966
+2DSquare,N512,24,pressureVelocityCoupling,GPUExecutor,778319.0,NeoN,Compute rAU,7.00215464353305
+2DSquare,N512,25,pressureVelocityCoupling,GPUExecutor,2542550.0,NeoN,Compute HbyA,2.143481937425026
+2DSquare,N512,26,pressureVelocityCoupling,GPUExecutor,369.839,NeoN,constrainHbyA,14735.8985937124
+2DSquare,N64,9,pressureVelocityCoupling,CPU,7020.47,OpenFOAM,Compute rAU,6.806695278236357
+2DSquare,N64,10,pressureVelocityCoupling,CPU,48237.4,OpenFOAM,Compute HbyA,0.9906462620290479
+2DSquare,N64,11,pressureVelocityCoupling,OpenFOAM,47786.2,OpenFOAM,constrainHbyA,1.0
+2DSquare,N64,12,pressureVelocityCoupling,SerialExecutor,17947.8,NeoN,Compute rAU,2.6625101683771826
+2DSquare,N64,13,pressureVelocityCoupling,SerialExecutor,239927.0,NeoN,Compute HbyA,0.19916974746485389
+2DSquare,N64,14,pressureVelocityCoupling,SerialExecutor,61.4719,NeoN,constrainHbyA,777.3665691153193
+2DSquare,N64,15,pressureVelocityCoupling,GPUExecutor,639157.0,NeoN,Compute rAU,0.07476441625453527
+2DSquare,N64,16,pressureVelocityCoupling,GPUExecutor,1962580.0,NeoN,Compute HbyA,0.02434866349397222
+2DSquare,N64,17,pressureVelocityCoupling,GPUExecutor,373.485,NeoN,constrainHbyA,127.94677162402773
+3DCube,N16,0,pressureVelocityCoupling,CPU,10071.7,OpenFOAM,Compute rAU,6.220548666064318
+3DCube,N16,1,pressureVelocityCoupling,CPU,63632.6,OpenFOAM,Compute HbyA,0.9845818024094568
+3DCube,N16,2,pressureVelocityCoupling,OpenFOAM,62651.5,OpenFOAM,constrainHbyA,1.0
+3DCube,N16,3,pressureVelocityCoupling,SerialExecutor,18877.2,NeoN,Compute rAU,3.3188979297777212
+3DCube,N16,4,pressureVelocityCoupling,SerialExecutor,331524.0,NeoN,Compute HbyA,0.18898028498690894
+3DCube,N16,5,pressureVelocityCoupling,SerialExecutor,256.668,NeoN,constrainHbyA,244.0954852182586
+3DCube,N16,6,pressureVelocityCoupling,GPUExecutor,710675.0,NeoN,Compute rAU,0.08815773736236676
+3DCube,N16,7,pressureVelocityCoupling,GPUExecutor,2145040.0,NeoN,Compute HbyA,0.02920761384403088
+3DCube,N16,8,pressureVelocityCoupling,GPUExecutor,23613.3,NeoN,constrainHbyA,2.653229324152067
+3DCube,N64,27,pressureVelocityCoupling,CPU,791920.0,OpenFOAM,Compute rAU,9.106993130619255
+3DCube,N64,28,pressureVelocityCoupling,CPU,6286800.0,OpenFOAM,Compute HbyA,1.1471670802315963
+3DCube,N64,29,pressureVelocityCoupling,OpenFOAM,7212010.0,OpenFOAM,constrainHbyA,1.0
+3DCube,N64,30,pressureVelocityCoupling,SerialExecutor,1189500.0,NeoN,Compute rAU,6.0630601092896175
+3DCube,N64,31,pressureVelocityCoupling,SerialExecutor,21809700.0,NeoN,Compute HbyA,0.33067900979839243
+3DCube,N64,32,pressureVelocityCoupling,SerialExecutor,7512.4,NeoN,constrainHbyA,960.0141100047921
+3DCube,N64,33,pressureVelocityCoupling,GPUExecutor,786094.0,NeoN,Compute rAU,9.174488038326205
+3DCube,N64,34,pressureVelocityCoupling,GPUExecutor,2675650.0,NeoN,Compute HbyA,2.695423541943079
+3DCube,N64,35,pressureVelocityCoupling,GPUExecutor,23925.9,NeoN,constrainHbyA,301.4310851420427
