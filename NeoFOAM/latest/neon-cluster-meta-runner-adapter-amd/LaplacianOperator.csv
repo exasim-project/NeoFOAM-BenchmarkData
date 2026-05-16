@@ -1,0 +1,21 @@
+MeshType,Resolution,level_2,test_case,benchmark_name,avg_runtime,section1,section2,normalized_speedup
+2DSquare,N512,55,LaplacianOperator,OpenFOAM,1650510.0,OpenFOAM,with Allocation,1.0
+2DSquare,N512,56,LaplacianOperator,SerialExecutor,6983390.0,NeoN,with Allocation,0.23634796280889367
+2DSquare,N512,57,LaplacianOperator,SerialExecutor,6937800.0,NeoN,No allocation,0.2379010637377843
+2DSquare,N512,58,LaplacianOperator,GPUExecutor,1548950.0,NeoN,with Allocation,1.0655669969979664
+2DSquare,N512,59,LaplacianOperator,GPUExecutor,853748.0,NeoN,No allocation,1.9332519666224695
+2DSquare,N64,30,LaplacianOperator,OpenFOAM,21084.1,OpenFOAM,with Allocation,1.0
+2DSquare,N64,31,LaplacianOperator,SerialExecutor,123302.0,NeoN,with Allocation,0.1709956042886571
+2DSquare,N64,32,LaplacianOperator,SerialExecutor,107751.0,NeoN,No allocation,0.19567428608551196
+2DSquare,N64,33,LaplacianOperator,GPUExecutor,1298190.0,NeoN,with Allocation,0.01624115114120429
+2DSquare,N64,34,LaplacianOperator,GPUExecutor,695093.0,NeoN,No allocation,0.030332775614198386
+3DCube,N16,5,LaplacianOperator,OpenFOAM,32479.0,OpenFOAM,with Allocation,1.0
+3DCube,N16,6,LaplacianOperator,SerialExecutor,171377.0,NeoN,with Allocation,0.18951784661885784
+3DCube,N16,7,LaplacianOperator,SerialExecutor,156976.0,NeoN,No allocation,0.2069042401386199
+3DCube,N16,8,LaplacianOperator,GPUExecutor,1382780.0,NeoN,with Allocation,0.023488190456905655
+3DCube,N16,9,LaplacianOperator,GPUExecutor,741095.0,NeoN,No allocation,0.043825690363583615
+3DCube,N64,80,LaplacianOperator,OpenFOAM,2621860.0,OpenFOAM,with Allocation,1.0
+3DCube,N64,81,LaplacianOperator,SerialExecutor,10351300.0,NeoN,with Allocation,0.253287992812497
+3DCube,N64,82,LaplacianOperator,SerialExecutor,10188900.0,NeoN,No allocation,0.2573251283259233
+3DCube,N64,83,LaplacianOperator,GPUExecutor,1591230.0,NeoN,with Allocation,1.6476939223116709
+3DCube,N64,84,LaplacianOperator,GPUExecutor,885673.0,NeoN,No allocation,2.96030250442319
