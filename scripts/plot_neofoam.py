@@ -113,6 +113,10 @@ def main():
     for fold in folds:
         if is_number(fold):
             plot_fold(Path(root), Path(fold))
+    root, folds, _  = next(os.walk("NeoN"))
+    for fold in folds:
+        if is_number(fold):
+            plot_fold(Path(root), Path(fold))
 
 
 if __name__ == "__main__":
