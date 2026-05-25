@@ -34,7 +34,7 @@ def plot_file_neon(pr_file, main_file):
     #plt.grid()
     plot.savefig(str(pr_file).replace(".json", "_relative.png"))
 
-    pr["fvops"] = pr["size"]/pr["mean"] * 10e9
+    pr["fvops"] = pr["size"]/pr["mean"] * 1e9
 
     plot = sb.catplot(kind="bar", data=pr, x="size", y="fvops", hue="executor", col="test_case")
     #plt.grid()
@@ -61,7 +61,7 @@ def plot_file_neofoam(pr_file, latest):
         df["mean"] = df["avg_runtime"]
         df["executor"] = df["benchmark_name"]
         df["test_case"] = df["section1"] + df["MeshType"]
-        df["fvops"] = df["size"]/df["mean"] * 10e9
+        df["fvops"] = df["size"]/df["mean"] * 1e9
         df["executor_sec2"] =     df["benchmark_name"] +     df["section2"] 
         return df
 
