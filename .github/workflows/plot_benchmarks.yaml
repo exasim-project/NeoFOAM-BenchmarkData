@@ -1,0 +1,54 @@
+name: Generate Benchmark Plots
+run-name: Generate Benchmark Plots
+
+on:
+  push:
+    branches:
+      - 'NeoN_PR_*'
+      - 'NeoFOAM_PR_*'
+
+permissions:
+  contents: write
+
+jobs:
+  plot-neon:
+    name: Plot NeoN Benchmarks
+    if: startsWith(github.ref_name, 'NeoN_PR_')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install pandas seaborn matplotlib
+
+      - name: Generate plots
+        run: python scripts/plot_neon.py
+
+      - name: Commit plots
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add NeoN/**/*.png
+          git commit -m 'generate NeoN benchmark plots' || echo "No changes to commit"
+          git push origin ${{ github.ref }}
+
+  plot-neofoam:
+    name: Plot NeoFOAM Benchmarks
+    if: startsWith(github.ref_name, 'NeoFOAM_PR_')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install pandas seaborn matplotlib
+
+      - name: Generate plots
+        run: python scripts/plot_neofoam.py
+
+      - name: Commit plots
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add NeoFOAM/**/*.png
+          git commit -m 'generate NeoFOAM benchmark plots' || echo "No changes to commit"
+          git push origin ${{ github.ref }}
